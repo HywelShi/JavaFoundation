@@ -1,0 +1,101 @@
+循环：
+break结束循环
+continue跳过此次循环直接执行下一次循环
+案例：
+计算1-100之间除了能被3整除的数之和
+
+计算1-100之间排除3的倍数 包含3的数字之和
+i%3==0
+i%10==3
+i/10==3
+
+
+Java中的数据类型
+
+8种基本数据类型
+byte	位	B KB MB GB TB 进制为1024 
+short	短整型
+int	整型    +21亿多到-21亿多
+long	长整型
+特殊情况：
+1.两个整数相除结果还是整数 小数位无条件舍去
+10/3 = 3
+2.程序里面直接写的整数默认类型都是int型
+3.长整型的数字需要在后面添加L/l;
+
+
+double 双精度浮点型 小数
+float  单精度浮点型 小数
+特殊：
+1.float类型的需要在后面添加F/f
+2.直接写的小数默认类型都是double型
+3.只要有double参与运算，结果都为double型
+10.0/3=3.333...
+
+
+boolean 布尔型 true false
+char 字符型
+英文
+数字
+汉字
+特殊符号
+控制字符
+等等
+特殊：
+char实际上内存当中存储是一个整数
+显示的是一个符号
+
+char与int之间转换
+char a = '张';
+(int)a
+(char)(a+1)
+
+
+数据类型转换：
+小类型可以自动往大类型转换
+大类型往小类型转换需要强制转换
+
+小数转换为整数
+小数前面添加(int)
+但是会将小数位直接舍去
+
+
+写代码之前记得分析程序中
+所用到的数据类型选取
+合适的数据类型
+
+
+数组
+1.数据类型[] 数组名 = {};
+int[] a = {1,2,3};
+2.数据类型[] 数组名 = new 数据类型[数组的长度];
+int[] a = new int[3];
+
+案例：循环录入5个学生姓名
+录入完毕之后全部输出
+
+作业：
+循环录入学生信息
+要求一次录入10个学生姓名
+String[] names = new String[10];
+录入时同时录入成绩
+double[] scores = new double[10];
+录入完毕之后
+for(int i=0;i<10;i++){
+	String name = scan.next();
+	double score = scan.nextDouble();
+	names[i] = name;
+	scores[i] = score;
+
+}
+输入要查询的学生姓名
+for(int i=0;i<10;i++){
+	System.out.println("请输入查询的姓名：");
+	String name = scan.next();
+	if(name.equals(names[i])){
+	  System.out.println(scores[i]);
+	}
+}
+输出对应的成绩
+
+
