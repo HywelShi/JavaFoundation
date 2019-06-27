@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>模拟购物车v1</title>
+<script type="text/javascript">
+	function add(btn){
+		//1.通过点击的按钮来获取td
+		var td = btn.parentNode;
+		//2.通过td获取对应的tr
+		var tr = td.parentNode;
+		//3.通过tr找到包含的所有的td 生成一个数组tds
+		var tds = tr.getElementsByTagName("td");
+		//4.通过数组tds下标 利用innerHTML获取每个值
+		var name = tds[0].innerHTML;
+		var price = tds[1].innerHTML;
+		var address = tds[2].innerHTML;
+		//alert(name+"   "+price+"  "+address);
+		
+		//5.将结果插入到购物车里面
+		gwc.innerHTML += 
+		"<tr align='center'>"+
+		"<td>"+name+"</td>"+
+		"<td>"+price+"</td>"+
+		"<td>"+address+"</td>"+
+		"<td>"+
+		"<input type='button' value='-' onclick='change(this,-1);'>"+
+		"<input type='text' size='2' value='1' readonly='readonly'>"+
+		"<input type='button' value='+' onclick='change(this,1);'>"+
+		"</td>"+
+		"<td>"+price+"</td>"+
+		"<td>"+
+		"<input type='button' value='移出购物车' "+
+		"onclick='del(this);'>"+
+		"</td>"+
+		"</tr>";
+		total();
+	}
+	function del(btn){
+		//通过移出按钮得到tr
+		var tr = btn.parentNode.parentNode;
+		//再通过tr的父亲tbody将tr移出
+		tr.parentNode.removeChild(tr);
+		total();
+	}
+	
+	function change(btn,n){
+		var inputs = btn.parentNode.getElementsByTagName("input");
+		var a = inputs[1].value;//a取出来是一个字符串
+		//转换 将字符串转换为整数
+		a = parseInt(a);
+		a += n;
+		if(a<1 || a>10){
+			return;
+		}
+		inputs[1].value = a;
+		//通过按钮找所有的td 生成一个数组tds
+		var tds = 
+			btn.parentNode.parentNode.getElementsByTagName("td");
+		var price = tds[1].innerHTML;//价格是带单位 元的 无法进行乘法运算
+		//利用字符串的替换方法replace
+		price = price.replace("元","");
+		var heji = price*a;
+		//将合计的结果存放到对应的列
+		tds[4].innerHTML = heji+"元";
+		total();
+		
+	}
+	//计算总计钱数
+	function total(){
+		var sum = 0;//总计
+		//获取tbody下所有的tr-trs
+		var trs = 
+		document.getElementById("gwc").getElementsByTagName("tr");
+		for(var i = 0;i<trs.length;i++){
+			//找到每个tr对应的td-tds
+			var tds = trs[i].getElementsByTagName("td");
+			var heji = tds[4].innerHTML;//带单位
+			heji = heji.replace("元","");
+			heji = parseInt(heji);
+			sum += heji;
+		}
+		s.innerHTML = sum+"元";
+	}
+	
+
+	
+</script>
+</head>
+<body>
+	<h1>商品列表</h1>
+	<table border="1" width="60%" cellspacing="0">
+		<tr align="center">
+			<td>名称</td>
+			<td>价格</td>
+			<td>产地</td>
+			<td>操作</td>
+		</tr>
+		<tr align="center">
+			<td>冰棒</td>
+			<td>5元</td>
+			<td>长沙</td>
+			<td>
+				<input type="button" value="加入购物车"
+				onclick="add(this);">
+			</td>
+		</tr>
+		<tr align="center">
+			<td>肉粽</td>
+			<td>5元</td>
+			<td>嘉兴</td>
+			<td>
+				<input type="button" value="加入购物车"
+				onclick="add(this);">
+			</td>
+		</tr>
+		<tr align="center">
+			<td>臭豆腐</td>
+			<td>10元</td>
+			<td>长沙</td>
+			<td>
+				<input type="button" value="加入购物车"
+				onclick="add(this);">
+			</td>
+		</tr>
+	</table>
+	
+	<h1>购物车</h1>
+	<table border="1" width="60%" cellspacing="0">
+		<tr align="center">
+			<td>名称</td>
+			<td>价格</td>
+			<td>产地</td>
+			<td>数量</td>
+			<td>合计</td>
+			<td>操作</td>
+		</tr>
+		<tbody id="gwc"></tbody>
+		<tr align="center">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>总计</td>
+			<td id="s">0元</td>
+		</tr>
+	</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
