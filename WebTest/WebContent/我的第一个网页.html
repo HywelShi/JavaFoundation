@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" 
+type="image/x-icon" href="hero2.png"/>
+<title>我的第一个网页 </title>
+<script type="text/javascript">
+	//定义变大事件
+	function big(tupian){
+		//测试 alert表示弹框
+		//alert("测试");
+		//变大无非就是图片的宽和高变大
+		tupian.style.width = "500px";
+		tupian.style.height = "500px";
+	}
+	function small(tupian){
+		tupian.style.width = "200px";
+		tupian.style.height = "200px";
+	}
+</script>
+</head>
+<body>
+	<!-- id属性是为了方便变大事件直接找到图片 -->
+	<img src="hero2.png" onmouseover="big(this);" 
+	onmouseleave="small(this);">
+	
+	<img src="hero2.png" onmouseover="big(this);" 
+	onmouseleave="small(this);">
+	
+	<img src="hero2.png" onmouseover="big(this);" 
+	onmouseleave="small(this);">
+	
+	<img src="hero2.png" onmouseover="big(this);" 
+	onmouseleave="small(this);">
+	<img src="hero2.png" onmouseover="big(this);" 
+	onmouseleave="small(this);">
+	<img src="hero2.png" onmouseover="big(this);" 
+	onmouseleave="small(this);">
+</body>
+</html>
+
+
+
+
+
