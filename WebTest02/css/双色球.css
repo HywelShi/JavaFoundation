@@ -1,0 +1,32 @@
+div{
+	width: 500px;
+	height: 100px;
+	border: 5px solid red;
+}
+li{
+	/*1.去掉小黑点*/
+	list-style: none;
+	/*2.指定宽和高*/
+	width: 50px;
+	height: 50px;
+	/*3.背景颜色*/
+	background-color: red;
+	/*4.变圆角*/
+	border-radius: 50%;
+	/*5.字体水平居中*/
+	text-align: center;
+	/*6.调整垂直居中 本质上调整的是行高*/
+	line-height: 50px;
+	/*扩展：字体颜色和大小*/
+	color: white;
+	font-size: 30px;
+	/*7.横着放 采用浮动原理*/
+	float: left;
+}
+#li07{
+	background-color: blue;
+}
+#li08{
+	background-color: green;
+}
+

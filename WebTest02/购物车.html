@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+		<script type="text/javascript"
+		 src="js/购物车.js"></script>
+	</head>
+	<body>
+		<h1>商品列表</h1>
+	<table border="1" width="60%" cellspacing="0">
+		<tr align="center">
+			<td>名称</td>
+			<td>价格</td>
+			<td>产地</td>
+			<td>操作</td>
+		</tr>
+		<tr align="center">
+			<td>冰棒</td>
+			<td>5元</td>
+			<td>长沙</td>
+			<td>
+				<input type="button" value="加入购物车"
+				onclick="add(this);">
+			</td>
+		</tr>
+		<tr align="center">
+			<td>肉粽</td>
+			<td>5元</td>
+			<td>嘉兴</td>
+			<td>
+				<input type="button" value="加入购物车"
+				onclick="add(this);">
+			</td>
+		</tr>
+		<tr align="center">
+			<td>臭豆腐</td>
+			<td>10元</td>
+			<td>长沙</td>
+			<td>
+				<input type="button" value="加入购物车"
+				onclick="add(this);">
+			</td>
+		</tr>
+	</table>
+	
+	<h1>购物车</h1>
+	<table border="1" width="60%" cellspacing="0">
+		<tr align="center">
+			<td>名称</td>
+			<td>价格</td>
+			<td>产地</td>
+			<td>数量</td>
+			<td>合计</td>
+			<td>操作</td>
+		</tr>
+		<!-- tbody表示表格主体-->
+		<tbody id="gwc"></tbody>
+		<tr align="center">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>总计</td>
+			<td>0元</td>
+		</tr>
+	</table>
+
+		
+	</body>
+</html>
