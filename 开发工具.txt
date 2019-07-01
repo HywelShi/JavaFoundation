@@ -1,4 +1,12 @@
-�ٶ������ӣ�
-��������ֱ�ӽ�ѹ��D���� 
-��tts �ҵ�eclipse.bat��������
-����: https://pan.baidu.com/s/12fxv2JHuXFj1oeHieUnDow ��ȡ��: xy7i 
+百度云链接：
+下载下来直接解压到D盘下 
+打开tts 找到eclipse.bat启动即可
+链接: https://pan.baidu.com/s/12fxv2JHuXFj1oeHieUnDow 提取码: xy7i 
+
+
+HBuilder
+直接百度进入官网
+找到首页
+了解更多
+选择windows版本 14M
+下载 解压找到里面的HBuiler.exe启动即可
