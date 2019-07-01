@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var timer;//表示定时器
+			//1.定义开始事件
+			function start(){
+				//2.启动定时器 控制change事件
+				timer = setInterval(change,1000);
+			}
+			var r = 0;var g = 0;var b = 0;
+			//3.定义change事件来改变body的背景颜色
+			function change(){
+				//r g b的颜色随机生成0-255
+				//JS当中随机生成a-b之间的随机数公司
+				//parseInt(Math.random()*(b-a+1)+a);
+				r = parseInt(Math.random()*266);
+				g = parseInt(Math.random()*266);
+				b = parseInt(Math.random()*266);
+				bo.style.backgroundColor="rgb("+r+","+g+","+b+")";
+			}
+			//4.定义停止事件//清除定时器
+			function stop(){
+				clearInterval(timer);
+			}
+		</script>
+	</head>
+	<body id="bo">
+			<button onclick="start();">开始</button>
+			<button onclick="stop();">停止</button>
+	</body>
+</html>

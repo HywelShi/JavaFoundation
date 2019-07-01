@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*都是用来美化body里面的内容 颜色 大小 位置...*/
+			#img02{
+				position: absolute;
+				right: 100px;
+				top: 100px;
+			}
+			#div01{
+				position: absolute;
+				width: 300px;
+				height: 100px;
+				/*背景颜色*/
+				background-color: rgba(255,255,255,0.5);
+				top: 300px;
+				left: 600px;
+				/*变圆角*/
+				border-radius: 20px;
+				/*调整文字大小 颜色 水平居中 垂直居中*/
+				font-size: 50px;
+				color: red;
+				text-align: center;
+				line-height: 100px;
+			}
+			#div01:hover{
+				color: green;
+				background-color: rgba(255,255,255,0.8);
+				/*改变鼠标形态 pointer表示小手*/
+				cursor: pointer;
+			}
+			
+		</style>
+		<script type="text/javascript">
+			//定义僵尸图片切换的事件
+			var a = 1;//表示第一张图片
+			function change(){
+				a++;//表示累加1
+				//当a涨到16 没有这张图片应当重置为1
+				if(a==16){
+					a=1;
+				}
+				img02.src ="images/BucketheadZombie2-"+a+".png"
+				
+			}
+			//设置定时器来控制change这个事件 定时器事件间隔单位为毫秒
+			setInterval(change,100);
+			
+			//定义单击事件
+			function start(){
+				//1.按钮消失 display属性值如果为none表示消失
+				div01.style.display = "none";
+				//2.设置定时器
+				setInterval(run,100);
+			}
+			//定义往前走事件
+			var b = 100;//默认例右边的距离为100px;
+			function run(){
+				b = b + 3;//自身加3   b += 3;
+				img02.style.right = b+"px";
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<img src="images/background1.png" />
+		<img src="images/BucketheadZombie2-1.png" id="img02" />
+		<div id="div01" onclick="start();">开始游戏</div>
+	</body>
+</html>

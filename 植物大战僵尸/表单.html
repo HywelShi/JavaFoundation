@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//1.定义检测账号事件
+			function check_username(){
+				//2.将账户文本框里面的内容取出来
+				var username = input01.value;
+				//3.判断内容长度是否在6-15位之间 还要判断是否为空
+				if(username==""){
+					//4.将提示用语添加到账号框后面的span里面
+					span01.innerHTML = "账号不能为空！";
+					span01.style.color = "red";
+				}else{
+					if(username.length<6 || username.length>15){
+						span01.innerHTML = "账号不合法，应在6-15位之间！";
+						span01.style.color = "red";
+					}else{
+						span01.innerHTML = "账号合法！";
+						span01.style.color = "green";
+					}
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form>
+			账号：<input type="text" 
+			onblur="check_username();" id="input01"/>
+			<span id="span01">请输入6-15位账号</span>
+			<br />
+			
+			密码：<input type="password" />
+			<span>请输入8-20位密码</span>
+		</form>
+	</body>
+</html>
