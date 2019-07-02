@@ -1,127 +1,127 @@
 2019/7/2
-JavaÒ»ÃÅÃæÏò¶ÔÏóÓïÑÔ
-JavaÒ»ÃÅÊÐ³¡Õ¼ÓÃÂÊ×î¸ß Ó¦ÓÃÃæ×î¹ãµÄÓïÑÔ
-Í¨ÐÅ ÁªÍ¨ µçÐÅ ÒÆ¶¯  ÑÇÐÅÁª´´ ´óÊý¾Ý²¿ÃÅ
-½ðÈÚ 
-Ò½ÁÆ ÏæÑÅÒ½Ôº ³¤³ÇÒ½ÁÆ-¹úÆó
+Javaä¸€é—¨é¢å‘å¯¹è±¡è¯­è¨€
+Javaä¸€é—¨å¸‚åœºå ç”¨çŽ‡æœ€é«˜ åº”ç”¨é¢æœ€å¹¿çš„è¯­è¨€
+é€šä¿¡ è”é€š ç”µä¿¡ ç§»åŠ¨  äºšä¿¡è”åˆ› å¤§æ•°æ®éƒ¨é—¨
+é‡‘èž 
+åŒ»ç–— æ¹˜é›…åŒ»é™¢ é•¿åŸŽåŒ»ç–—-å›½ä¼
 ...
 
-CÓïÑÔ-Æ«ÏòÓÚÓ²¼þ¿ª·¢
+Cè¯­è¨€-åå‘äºŽç¡¬ä»¶å¼€å‘
 
-JavaÆ«ÏòÓÚÈí¼þ¿ª·¢
-ÍøÕ¾ Èí¼þ²úÆ·
+Javaåå‘äºŽè½¯ä»¶å¼€å‘
+ç½‘ç«™ è½¯ä»¶äº§å“
 
-´óÊý¾Ý Ëã·¨
-Êý¾ÝÍÚ¾ò
+å¤§æ•°æ® ç®—æ³•
+æ•°æ®æŒ–æŽ˜
 
-ÈË¹¤ÖÇÄÜAI
+äººå·¥æ™ºèƒ½AI
 
-ÎïÁªÍøIOT Internet Of Things
-
-
-ÄÚÈÝ£º
-
-JSµ±ÖÐµÄÓï·¨½á¹¹ºÍÂß¼­ÔËËã
+ç‰©è”ç½‘IOT Internet Of Things
 
 
-°¸Àý1:ÍøÒ³ÉÏÓÐÁ½¸öÎÄ±¾¿ò
-ÊäÈëÁ½¸öÊý×Ö µ¥»÷°´Å¥ ¼ÆËãÁ½¸öÊýµÄºÍ
-//È«ÊÇJS¿ª·¢ÓïÑÔ
-//ÊÂ¼þ ´¥·¢Ìõ¼þ
-//½«×Ö·û´®×ª»»ÎªÊý×Ö
-//parseInt½«×Ö·û´®×ª»»ÎªÕûÊý Ð¡ÊýÎ»ÎÞÌõ¼þÉáÈ¥
-//parseFloat½«×Ö·û´®×ª»»ÎªÐ¡Êý 
+å†…å®¹ï¼š
+
+JSå½“ä¸­çš„è¯­æ³•ç»“æž„å’Œé€»è¾‘è¿ç®—
+
+
+æ¡ˆä¾‹1:ç½‘é¡µä¸Šæœ‰ä¸¤ä¸ªæ–‡æœ¬æ¡†
+è¾“å…¥ä¸¤ä¸ªæ•°å­— å•å‡»æŒ‰é’® è®¡ç®—ä¸¤ä¸ªæ•°çš„å’Œ
+//å…¨æ˜¯JSå¼€å‘è¯­è¨€
+//äº‹ä»¶ è§¦å‘æ¡ä»¶
+//å°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ•°å­—
+//parseIntå°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ•´æ•° å°æ•°ä½æ— æ¡ä»¶èˆåŽ»
+//parseFloatå°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºå°æ•° 
 
 
 
-ÖØµã£º
-1.JSµ±ÖÐµÄÊý¾ÝÀàÐÍ
-NumberÐÍ Êý×ÖÐÍ ÕûÊý Ð¡Êý 1+1=2
-StringÐÍ ×Ö·û´®ÐÍ 1+1=11
-2.ÆÕÍ¨ÎÄ±¾¿òÀïÃæÈ¡ÖµÈ¡³öÀ´ÀàÐÍÊÇStringÐÍ
-3.×Ö·û´®Êý×ÖÖ»ÓÐÔÚ¼ÆËã¼Ó·¨µÄ
-Ê±ºòÐèÒª×ª»»£¬¼õ·¨³Ë·¨³ý·¨»á
-×Ô¶¯×ª»»
-4.NaN£ºNot a Number²»ÊÇÒ»¸öÊý×Ö
+é‡ç‚¹ï¼š
+1.JSå½“ä¸­çš„æ•°æ®ç±»åž‹
+Numberåž‹ æ•°å­—åž‹ æ•´æ•° å°æ•° 1+1=2
+Stringåž‹ å­—ç¬¦ä¸²åž‹ 1+1=11
+2.æ™®é€šæ–‡æœ¬æ¡†é‡Œé¢å–å€¼å–å‡ºæ¥ç±»åž‹æ˜¯Stringåž‹
+3.å­—ç¬¦ä¸²æ•°å­—åªæœ‰åœ¨è®¡ç®—åŠ æ³•çš„
+æ—¶å€™éœ€è¦è½¬æ¢ï¼Œå‡æ³•ä¹˜æ³•é™¤æ³•ä¼š
+è‡ªåŠ¨è½¬æ¢
+4.NaNï¼šNot a Numberä¸æ˜¯ä¸€ä¸ªæ•°å­—
 
-isNaN()¿ÉÒÔÓÃÀ´ÅÐ¶ÏÒ»¸öÖµ
-µ½µÍÊÇ²»ÊÇÊý×Ö
+isNaN()å¯ä»¥ç”¨æ¥åˆ¤æ–­ä¸€ä¸ªå€¼
+åˆ°ä½Žæ˜¯ä¸æ˜¯æ•°å­—
 is Not a Number
-ÊÇ ²»ÊÇÒ»¸öÊý×Ö
+æ˜¯ ä¸æ˜¯ä¸€ä¸ªæ•°å­—
 isNaN()
-if(isNaN(Öµ)){²»ÊÇÒ»¸öÊý×Ö}
-else{ÊÇÒ»¸öÊý×Ö}
+if(isNaN(å€¼)){ä¸æ˜¯ä¸€ä¸ªæ•°å­—}
+else{æ˜¯ä¸€ä¸ªæ•°å­—}
 
 
 
-°¸Àý2£º¼Ó¼õ³Ë³ýÈ¡Óà¼ÆËãÆ÷
+æ¡ˆä¾‹2ï¼šåŠ å‡ä¹˜é™¤å–ä½™è®¡ç®—å™¨
 
 
 
 
-°¸Àý3£º¶þ¼¶ÁÐ±íÁª¶¯
+æ¡ˆä¾‹3ï¼šäºŒçº§åˆ—è¡¨è”åŠ¨
 
 
 
-ÖªÊ¶µã£º
-1¡¢JSµ±ÖÐµÄÑ­»·
-2¡¢JSµ±ÖÐµÄÊý×é
-½«ÏàÍ¬Êý¾ÝÀàÐÍÌí¼Óµ½Ò»¸ö×éµ±ÖÐ
-var Êý×éÃû = [];ÓÃ¶ººÅ¸ô¿ª
-¶þÎ¬Êý×é£º
-var Êý×éÃû = [[],[],[]];
+çŸ¥è¯†ç‚¹ï¼š
+1ã€JSå½“ä¸­çš„å¾ªçŽ¯
+2ã€JSå½“ä¸­çš„æ•°ç»„
+å°†ç›¸åŒæ•°æ®ç±»åž‹æ·»åŠ åˆ°ä¸€ä¸ªç»„å½“ä¸­
+var æ•°ç»„å = [];ç”¨é€—å·éš”å¼€
+äºŒç»´æ•°ç»„ï¼š
+var æ•°ç»„å = [[],[],[]];
 
-Êý×éÏÂ±ê£º±àºÅ´Ó0¿ªÊ¼
-¿ÉÒÔÍ¨¹ýÊý×éÏÂ±êÀ´·ÃÎÊÊý¾Ý
-Êý×éÃû[ÏÂ±ê]
+æ•°ç»„ä¸‹æ ‡ï¼šç¼–å·ä»Ž0å¼€å§‹
+å¯ä»¥é€šè¿‡æ•°ç»„ä¸‹æ ‡æ¥è®¿é—®æ•°æ®
+æ•°ç»„å[ä¸‹æ ‡]
 
-Êý×é³¤¶È£º
-Êý¾ÝÃû.length;
+æ•°ç»„é•¿åº¦ï¼š
+æ•°æ®å.length;
 
-Ñ­»··ÃÎÊÊý¾ÝÀïÃæËùÓÐµÄÄÚÈÝ
-for(var i=0;i<Êý¾ÝÃû.length;i++){
-	Êý¾ÝÃû[i];
+å¾ªçŽ¯è®¿é—®æ•°æ®é‡Œé¢æ‰€æœ‰çš„å†…å®¹
+for(var i=0;i<æ•°æ®å.length;i++){
+	æ•°æ®å[i];
 }
 
-3¡¢ÏÂÀ­Ñ¡
+3ã€ä¸‹æ‹‰é€‰
 <select>
-	<option>Ñ¡ÏîÃû³Æ</option>
+	<option>é€‰é¡¹åç§°</option>
 </select>
 
 
-4¡¢JSµ±ÖÐµÄ½Úµã²Ù×÷
-4.1 Í¨¹ýid»ñÈ¡½Úµã
-document.getElementById("idµÄÖµ");
-4.2 Í¨¹ý±êÇ©Ãû»ñÈ¡½Úµã ½Úµã»ñÈ¡µÄÊÇÒ»¸öÊý×é
-document.getElementsByTagName("±êÇ©Ãû")
-4.3 ´´½¨½Úµã
-document.createElement("½ÚµãÃû×Ö");
-4.4 ×·¼Ó½Úµã
-¸¸½Úµã.appendChild(×Ó½ÚµãÃû³Æ);
+4ã€JSå½“ä¸­çš„èŠ‚ç‚¹æ“ä½œ
+4.1 é€šè¿‡idèŽ·å–èŠ‚ç‚¹
+document.getElementById("idçš„å€¼");
+4.2 é€šè¿‡æ ‡ç­¾åèŽ·å–èŠ‚ç‚¹ èŠ‚ç‚¹èŽ·å–çš„æ˜¯ä¸€ä¸ªæ•°ç»„
+document.getElementsByTagName("æ ‡ç­¾å")
+4.3 åˆ›å»ºèŠ‚ç‚¹
+document.createElement("èŠ‚ç‚¹åå­—");
+4.4 è¿½åŠ èŠ‚ç‚¹
+çˆ¶èŠ‚ç‚¹.appendChild(å­èŠ‚ç‚¹åç§°);
 
 
-1.ÐèÇó·ÖÎö
-2.Ä£ÐÍÉè¼Æ
-3.ÏîÄ¿¼Ü¹¹
-4.Êý¾Ý·ÖÎö
-5.³ÌÐò¿ª·¢
-6.³ÌÐò²âÊÔ
-7.ÏîÄ¿ÊµÊ©
-8.ÏîÄ¿Î¬»¤
+1.éœ€æ±‚åˆ†æž
+2.æ¨¡åž‹è®¾è®¡
+3.é¡¹ç›®æž¶æž„
+4.æ•°æ®åˆ†æž
+5.ç¨‹åºå¼€å‘
+6.ç¨‹åºæµ‹è¯•
+7.é¡¹ç›®å®žæ–½
+8.é¡¹ç›®ç»´æŠ¤
 
-×÷Òµ£º
-1.¶þ¼¶Áª¶¯ÖØÍ·Ð´Ò»±é Äê¼¶¶þ¼¶Áª¶¯.html
-Ò»¼¶£ºÒ»Äê¼¶ ¶þÄê¼¶ ÈýÄê¼¶ ËÄÄê¼¶ ÎåÄê¼¶
-¶þ¼¶£ºÃ¿¸öÄê¼¶ÓÐÎå¸ö°à
-2.ÀÛ¼Ó.html
-Ò³ÃæÓÐÉÏÄÇ¸öÎÄ±¾¿ò 
-Ç°Á½¸öÊäÈë·¶Î§ °´Å¥½ÐÀÛ¼Ó
-µÚÈý¸ö¿ò¼ÆËãÁ½¸ö·¶Î§Ö®¼äÏà¼ÓµÄºÍ
+ä½œä¸šï¼š
+1.äºŒçº§è”åŠ¨é‡å¤´å†™ä¸€é å¹´çº§äºŒçº§è”åŠ¨.html
+ä¸€çº§ï¼šä¸€å¹´çº§ äºŒå¹´çº§ ä¸‰å¹´çº§ å››å¹´çº§ äº”å¹´çº§
+äºŒçº§ï¼šæ¯ä¸ªå¹´çº§æœ‰äº”ä¸ªç­
+2.ç´¯åŠ .html
+é¡µé¢æœ‰ä¸Šé‚£ä¸ªæ–‡æœ¬æ¡† 
+å‰ä¸¤ä¸ªè¾“å…¥èŒƒå›´ æŒ‰é’®å«ç´¯åŠ 
+ç¬¬ä¸‰ä¸ªæ¡†è®¡ç®—ä¸¤ä¸ªèŒƒå›´ä¹‹é—´ç›¸åŠ çš„å’Œ
 var num1 = input01.value;
 var num2 = input02.value;
-if(num2<num1){ÌáÊ¾ÊäÈëÓÐÎÞ}
+if(num2<num1){æç¤ºè¾“å…¥æœ‰æ— }
 var sum = 0;
-for(var i=num1;i<=num2;i++){
+for(var i=parseInt(num1);i<=parseInt(num2);i++){
 	sum += i;
 }
 input03.value = sum;
