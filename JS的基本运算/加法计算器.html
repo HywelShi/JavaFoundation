@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//1.定义加法事件
+			function add(){
+				//alert("开始计算加法");
+				//2.将前两个文本框里面的值取出来
+				var num1 = input01.value;
+				var num2 = input02.value;
+				if(num1=="" || num2==""){
+					alert("输入不能为空，请重新输入！");
+				}
+				if(isNaN(num1) || isNaN(num2)){
+					alert("输入有误，请输入数字！");
+				}
+				//3.计算和
+				var num3 = parseFloat(num1)+parseFloat(num2);
+				//4.将和填入到第三个文本框里面
+				input03.value = num3;
+				//input03.value = 
+				//parseFloat(input01.value)+
+				//parseFloat(input02.value);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="input01"/>+
+		<input type="text" id="input02"/>
+		<button onclick="add();">=</button>
+		<input type="text" id="input03"/>
+	</body>
+</html>

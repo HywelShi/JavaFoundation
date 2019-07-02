@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function show(){
+				//生成一个div数组 存放的是文档中所有的div
+				var divs = 
+				document.getElementsByTagName("div");
+				for(var i=0;i<divs.length;i++){
+					alert(divs[i].innerHTML);
+				}
+			}
+		</script>
+	</head>
+	<body>
+			<button onclick="show();">显示</button>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+	</body>
+</html>

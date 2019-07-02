@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//btn指代当前点击的按钮
+			function cal(btn){
+				//1.获取当前点击的按钮里面的符号
+				var symbol = btn.innerHTML;
+				//2.取前两个文本框的值
+				var num1 = input01.value;
+				var num2 = input02.value;
+				if(num1=="" || num2==""){
+					alert("输入不能为空，请重新输入！");
+				}
+				if(isNaN(num1) || isNaN(num2)){
+					alert("输入有误，请输入数字！");
+				}
+				//3.判断symbol符号
+				if(symbol=="+"){
+					input03.value = 
+					parseFloat(num1)+parseFloat(num2);
+				}else if(symbol=="-"){
+					input03.value = num1-num2;
+				}else if(symbol=="*"){
+					input03.value = num1*num2;
+				}else if(symbol=="/"){
+					input03.value = num1/num2;
+				}else{
+					input03.value = num1%num2;
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+			<input type="text" size="15" id="input01"/><br />
+			<input type="text" size="15" id="input02" /><br />
+			<button onclick="cal(this);">+</button>
+			<button onclick="cal(this);">-</button>
+			<button onclick="cal(this);">*</button>
+			<button onclick="cal(this);">/</button>
+			<button onclick="cal(this);">%</button>
+			<br />
+			<input type="text" size="15" id="input03" />
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//1.准备数据9个市 分为3小组存到一个大组中
+			var cities = [
+							["请选择"],
+							["联想","戴尔","宏碁","华硕"],
+							["合肥市","黄山市","芜湖市"],
+							["沈阳市","大连市","锦州市","丹东市","葫芦岛市"]
+						];
+			
+			//2.定时显示事件
+			function show(){
+				//p.value取的是第一个省份下拉选中选择的
+				//选项的value值 并且每次只能选一个
+				//3.获取每个省对应的市
+				//3.1 获取第一个下拉选
+				var p = document.getElementById("p");
+				//3.2 通过p获取value值 再通过值获取对应的市
+				var c = cities[p.value];
+				//4.将对应的市添加到第二个下拉选中
+				//5.第二个下拉选节点获取过来
+				var city = document.getElementById("city");
+				//9.追加节点之前需要先清空city
+				city.innerHTML = "";
+				for(var i=0;i<c.length;i++){
+					//6.创建节点option 默认是空的
+					var o = document.createElement("option");
+					//7.节点option添加城市名称
+					o.innerHTML = c[i];
+					//8.将新节点添加到city上
+					city.appendChild(o);//追加是类增的
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<select onchange="show();" id="p">
+			<option value="0">请选择</option>
+			<option value="1">电脑</option>
+			<option value="2">手机</option>
+			<option value="3">手表</option>
+		</select>
+		<select id="city">
+			<option>请选择</option>
+		</select>
+	</body>
+</html>
