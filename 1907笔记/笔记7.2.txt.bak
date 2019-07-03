@@ -113,8 +113,6 @@ document.createElement("节点名字");
 1.二级联动重头写一遍 年级二级联动.html
 一级：一年级 二年级 三年级 四年级 五年级
 二级：每个年级有五个班
-
-
 2.累加.html
 页面有上那个文本框 
 前两个输入范围 按钮叫累加
@@ -127,3 +125,5 @@ for(var i=num1;i<=num2;i++){
 	sum += i;
 }
 input03.value = sum;
+
+https://github.com/HywelShi/JavaFoundation

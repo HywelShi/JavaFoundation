@@ -1,0 +1,70 @@
+计算机已经不是辅助工具
+
+要习惯用数据的角度来看待事物
+
+前端开发：
+先搭建网页 HMTL 都是由标签组成的
+
+再美化网页 CSS
+<style type="text/css"></style>
+可以将CSS嵌入到HTML当中
+语法机构：选择器{属性:属性值}
+
+
+最后做动效 JavaScript
+<script type="text/javascript"></script>
+可以将JavaScript嵌入到HTML当中
+事件：触发条件触发时发生的事情
+function 事件名(){
+事件具体发生的内容
+}
+
+12点吃饭
+触发条件：时间到了12点
+事件：吃饭
+function 吃饭(){
+  
+}
+
+触发条件：鼠标单击 鼠标划过 鼠标离开。。。
+
+
+
+innerHTML和value的区别
+innerHTML往标签中间添加内容
+value往文本框中添加内容
+
+表格：
+<table>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+tr:行
+td:列-单元格
+
+<table>
+	<thead></thead>
+	<tbody></tbody>
+	<tfoot></tfoot>
+</table>
+
+bug -考虑各种情况逐一解决
+
+软件升级：
+1.修复bug
+2.增加功能-加钱
+
+
+知识点：
+通过子节点访问父节点
+子节点.parentNode;
+通过父节点删除子节点
+父节点.removeChild(子节点);
+
+
+
+
+开发手册：
+前端开发手册：http://www.w3school.com.cn
+JavaSE开发手册：http://www.matools.com/api/java8
