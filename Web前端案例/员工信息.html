@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			tr{
+				/*文本居中*/
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			//btn表示按钮,通过del(this),this传递过来的
+			function del(btn){
+				var td = btn.parentNode;
+				var tr = td.parentNode;
+				var table = tr.parentNode;
+				table.removeChild(tr);
+				//综合写法
+				btn.parentNode.parentNode.parentNode.removeChild(
+				btn.parentNode.parentNode);
+				
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+			<table width="400px" border="1px" cellspacing="0">
+				<tr>
+					<td>编号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>张三</td>
+					<td>30</td>
+					<td><button onclick="del(this);">删除</button></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>李四</td>
+					<td>25</td>
+					<td><button onclick="del(this);">删除</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>王五</td>
+					<td>26</td>
+					<td><button onclick="del(this);">删除</button></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>马六</td>
+					<td>26</td>
+					<td><button onclick="del(this);">删除</button></td>
+				</tr>
+				
+			</table>
+	</body>
+</html>

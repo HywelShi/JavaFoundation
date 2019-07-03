@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			tr{
+				/*文本居中*/
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			//btn表示按钮,通过del(this),this传递过来的
+			function del(btn){
+				var td = btn.parentNode;
+				var tr = td.parentNode;
+				var table = tr.parentNode;
+				table.removeChild(tr);
+				//综合写法
+				//btn.parentNode.parentNode.parentNode.removeChild(
+				//btn.parentNode.parentNode);
+			}
+			var a = 0;//默认编号为0
+			function add(){
+				var name = input01.value;
+				var age = input02.value;
+				var address = input03.value;
+				if(name==""||age==""||address==""){
+					alert("内容不能为空！");
+				}else{
+					a++;//每添加一行 编号增加1
+					tb.innerHTML +=
+					 "<tr>"+
+					 "<td>"+a+"</td>"+
+					 "<td>"+name+"</td>"+
+					 "<td>"+age+"</td>"+
+					 "<td>"+address+"</td>"+
+					 "<td><button onclick='del(this);'>删除</button></td>"+
+					 "</tr>";
+					 //三个文本框清空
+					 input01.value = "";
+					 input02.value = "";
+					 input03.value = "";
+				}
+			}
+		</script>
+	</head>
+	<body>
+			<div align="center">
+				<h3>学员信息录入</h3>
+				姓名：<input type="text" id="input01"/><br />
+				年龄：<input type="text" id="input02"/><br />
+				地址：<input type="text" id="input03"/><br />
+				<button onclick="add();">录入</button>
+			</div>
+			<h4 align="center">学员信息明细</h4>
+			<table width="400px" border="1px"
+			 cellspacing="0" align="center">
+				<tr>
+					<td>编号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>地址</td>
+					<td>操作</td>
+				</tr>
+				<tbody  id="tb"></tbody>
+			</table>
+	</body>
+</html>

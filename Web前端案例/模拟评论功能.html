@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*都是用来美化body里面的内容*/
+			input{
+				width: 440px;
+				height: 50px;
+			}
+			button{
+				width: 60px;
+				height: 50px;
+			}
+			img{
+				width: 50px;
+				height: 50px;
+			}
+			div{
+				/*字体大小*/
+				font-size: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+			var a = 0;//默认没有楼层
+			function add(){
+				//判断文本框中是否为空
+				//如果为空则弹框提示不能为空
+				//不为空则评论
+				if(input01.value==""){
+					alert("评论不能为空！");
+				}else{
+					a++;//表示增加1
+					div01.innerHTML +=
+					 "第"+a+"楼<img src='1.jpg'/>史宏伟："
+					 +input01.value+"<br/>";
+				}
+				 //清空文本框
+				 
+				 input01.value = "";
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		<h1>娱乐圈频繁婚变到时是炒作还是事实？</h1>
+		<input type="text" id="input01" />
+		<button onclick="add();">发表</button>
+		<!-- div表示选取一部分区域 -->
+		<div id="div01"></div>
+	</body>
+</html>
