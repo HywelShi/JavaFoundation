@@ -1,0 +1,78 @@
+jQuery前端框架
+本质上底层是JS
+.js结尾的文件
+
+使用方法：
+1.下载 ，尽量减少使用最新版本
+2.将jQuery复制到项目当中 
+加载到网页当中
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+3.调用jQuery对应的方法
+
+
+**jQuery必须要先引入再使用
+
+jQuery语法结构：
+$(selector).action();
+$定义jquery
+selector表示选择的内容
+action表示动作
+
+
+jQuery常用的方法：
+()里面可以加上时间 单位是毫秒
+slow慢 fast块
+
+1.slideToggle()实现上下滑动面板
+2.fadeToggle()实现淡入淡出
+3.animate动画
+
+页面上的元素默认位置都是固定的
+想要移动需要添加position属性
+
+
+
+
+框架：别人写好的架构我们根据具体的
+业务来调用架构里面方法来实现
+
+网页三大语言：
+HTML 组成网页
+CSS  美化网页
+JavaScript-JS 动态
+
+案例1：鼠标滑动到导航栏上下拉列表
+
+案例2：实现点击按钮小方框走一圈
+
+练习：实现点击按钮小方框走出一个W
+
+案例3：实现鼠标划过小图片
+大图片跟着切换
+mouseover 鼠标划过
+mouseleave鼠标离开
+.css("属性"，"属性的值");
+$(this)[0].src 获取当前鼠标划过的小图片的src值$(this).attr('src') 功能同上
+.attr('src',图片的名称);替换属性值 替换大图的图片名称
+
+案例4：页面上有五个带边框的小块
+鼠标划上去之后随机产生一种背景颜色
+鼠标离开之后恢复白色
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
