@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#div01{
+				width: 200px;/*宽*/
+				height: 20px;/*高*/
+				background-color: aquamarine;/*背景颜色*/
+				text-align: center;/*文本居中*/
+				border: 1px solid gray;/*灰色实现边框*/
+			}
+			#div02{
+				width: 200px;/*宽*/
+				height: 200px;/*高*/
+				background-color: aquamarine;/*背景颜色*/
+				text-align: center;/*文本居中*/
+				border: 1px solid gray;/*灰色实现边框*/
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			//1.当网页加载完毕之后开始启动
+			$(function(){
+				//2.给div01绑定一个单击事件
+				$("#div01").click(function(){
+					//3.让div02开始上下滑动
+					//slideToggle表示上下滑动
+					$("#div02").slideToggle(10000);
+				});
+			});
+			//1.$(function(){});
+			//2.$(function(){$("#div01").click(function(){});});
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="div01">点击我滑动面板</div>
+		<div id="div02">hello word !</div>
+	</body>
+</html>

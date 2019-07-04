@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				/*边框三个属性 粗细 实线 颜色*/
+				border: 1px solid gray;
+				float: left;/*竖着的横起来*/
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("div").mouseover(function(){
+					//r g b 范围都是0-255
+					//parseInt(Math.random()*266)
+					//随机产生0-255的一个随机数
+					var r = parseInt(Math.random()*266);
+					var g = parseInt(Math.random()*266);
+					var b = parseInt(Math.random()*266);
+					$(this).css("backgroundColor","rgb("+r+","+g+","+b+")");
+				});
+				$("div").mouseleave(function(){
+					$(this).css("backgroundColor","white");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

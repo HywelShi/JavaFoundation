@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				/*body里面的内容居中*/
+				text-align: center;
+			}
+			#div02 img{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			//1.页面加载
+			$(function(){
+				//2.给div02所有的图片添加鼠标划过事件
+				$("#div02 img").mouseover(function(){
+					//3.给当前划过的图片添加边框
+					$(this).css("border","3px solid red");
+					$(this).css("width","120px");
+					$(this).css("height","120px");
+					//6.将当前划过的图片替换到大图上面
+					//$(this)[0].src 获取当前鼠标划过的小图片的src值
+					//$(this).attr('src') 功能同上
+					//.attr('src',图片的名称);替换属性值 替换大图的图片名称
+					$("#div01 img").attr('src',$(this)[0].src);
+				});
+				//4.给div02所有的图片添加鼠标离开事件
+				$("#div02 img").mouseleave(function(){
+					//5.给当前划过的图片去掉边框
+					$(this).css("border","0");
+					$(this).css("width","100px");
+					$(this).css("height","100px");
+				});
+			});
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="div01">
+			<img src="1.jpg"/>
+		</div>
+		<div id="div02">
+			<img  src="1.jpg"/>
+			<img  src="2.jpg"/>
+			<img  src="3.jpg"/>
+			<img  src="4.jpg"/>
+			<img  src="5.jpg"/>
+			<img  src="6.jpg"/>
+			<img  src="7.jpg"/>
+		</div>
+	</body>
+</html>
