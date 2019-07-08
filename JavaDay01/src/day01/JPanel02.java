@@ -31,7 +31,7 @@ MouseMotionListener{
 		g.drawImage(hero,x,y,100,100,null);
 		
 		
-		//作业：生成多个敌机
+		/*//作业：生成多个敌机
 		for(int i=1;i<=10;i++){
 			int n = (int)(Math.random()*8+1);
 			ImageIcon epIcon = new ImageIcon("ep0"+n+".png");
@@ -41,7 +41,7 @@ MouseMotionListener{
 			int width = (int)(Math.random()*51+50);
 			int height = (int)(Math.random()*51+50);
 			g.drawImage(ep, x, y, width,height,null);
-		}	
+		}	*/
 	
 	}
 	@Override
