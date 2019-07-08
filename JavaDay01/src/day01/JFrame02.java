@@ -1,6 +1,5 @@
 package day01;
 
-import java.awt.Color;
 
 //将别人写好的类拿过来使用
 import javax.swing.JFrame;
