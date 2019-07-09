@@ -19,8 +19,6 @@ MouseMotionListener,Runnable{
 	//在绘制多个飞机之前，先将多个飞机的参数确定下来
 	//再去绘制，利用循环将x坐标在0-400之间随机
 	//y坐标在0-200之间随机 速度在1-5之间随机
-	
-	
 	/**
 	 * 定义飞机数量count
 	 * 定义存放十个飞机x坐标的数组xs
@@ -44,10 +42,6 @@ MouseMotionListener,Runnable{
 			speeds[i] = (int)(Math.random()*5+1);
 		}
 	}
-	
-	
-	
-	
 	//8.绘画方法 可以画自己想画的内容
 	public void paint(Graphics g){
 		//第一步：绘制背景图 现将图片加载到程序中
