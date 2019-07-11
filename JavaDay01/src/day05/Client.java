@@ -1,6 +1,9 @@
 package day05;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -29,21 +32,34 @@ public class Client {
 			OutputStream os = client.getOutputStream();
 			//2.绑定到发送工具上
 			PrintWriter pw = new PrintWriter(os);
+			
+			//客户端接收服务器反馈的消息
+			InputStream is = client.getInputStream();
+			InputStreamReader isr = new InputStreamReader(is);
+			BufferedReader br = new BufferedReader(isr);
 			/**
 			 * 客户端手动输入发送数据
-			 * 输入exit停止
-			 * 
 			 * 任务：屏蔽敏感字
-			 * 
 			 */
 			Scanner scan = new Scanner(System.in);
 			while(true){
 				System.out.println("请输入：");
 				String str = scan.next();
+				//将信息加密
+				String msg = "";
+				char[] c = str.toCharArray();
+				for (int i = 0; i < c.length; i++) {
+					//数组里面每个编码都加10
+					int num = (int)(c[i])+10;
+					//编码再转换为字符输出
+					msg+=(char)num;
+				}
 				//3.绑定具体发送的数据
-				pw.println(str);
+				pw.println(msg);
 				//4.发送
 				pw.flush();
+				System.out.println(br.readLine());
+				
 			}
 				
 			
