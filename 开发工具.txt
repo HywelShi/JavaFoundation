@@ -18,6 +18,12 @@ mysql数据库安装：
 百度搜索 网易镜像库
 http://mirrors.163.com/mysql/Downloads/MySQL-5.4/
 下载mysql-5.5.43-winx64.msi
+或者去百度云盘链接下载也可以
+链接: https://pan.baidu.com/s/1SMgqFm24v6Rq3uJsFZImpw 提取码: 3qua 
+
+版本5.4或者5.5都可以
+
+
 按照安装文档安装即可（忽略版本）
 文档目录下有Windows环境下对mysql-5.5.28版本的安装图解.docx
 
