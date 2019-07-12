@@ -1,0 +1,146 @@
+MySQL数据库
+
+
+1.数据库：存储数据的仓库
+按照一定的数据结构来存储的仓库
+
+2.常见的数据库：
+mysql oracle sql server 
+redies MongDB DB2....
+mysql：免费 轻量级 开源 开放源代码
+oracle：有免费有收费 存储数据量大 不开源
+	有些服务需要花钱去定制化 吃内存
+
+Oracle甲骨文公司
+
+
+
+3.安装与卸载mysql
+
+卸载：
+应用程序卸载
+找到c盘下program Data隐藏文件，删除mysql
+找到c盘下Program file,删除mysql
+
+**隐藏文件查看**
+组织-文件夹与搜索选项-查看-隐藏文件和文件夹
+-显示隐藏的文件、文件夹和驱动器
+
+
+4.数据存储的方式
+
+mysql数据库存储数据以
+库和表的形式来存储数据
+先建库再建表
+最后往表里面存入数据
+
+5.数据库当中的数据类型
+5.1 整数 int(整数的长度)  int(4)
+5.2 小数 double(N,M); 
+N表示整体的长度，M表示小数位的长度
+double(5,2)
+5.3 字符型 varchar(字符的长度)
+5.4 时间型 date,time,datetime(常用)
+
+
+
+
+
+1.win+R 输入cmd 
+2.输入mysql -u root -p 输入密码回车
+3.查看当前mysql有哪些数据库
+show databases;
+4.数据库的增删改查
+create database 数据库名字;
+drop database 数据库名字;
+5.进入数据库(创建表之前一定要指定数据库)
+use 数据库名字;
+
+查看表结构
+desc 表名;
+
+6.创建表
+语法结构：
+create table 表名(
+字段名1 数据类型及范围1,
+字段名2 数据类型及范围2,
+字段名3 数据类型及范围3,
+...
+);
+create table student_info(
+id int(6),
+name varchar(100),
+age int(3),
+gender varchar(2),
+address varchar(200),
+create_time datetime
+);
+
+7.修改表名
+
+alter table 旧表名 rename to 新表名;
+
+alter table student_info rename to stu_info;
+
+8.删除表
+drop table 表名;
+
+
+9.在某一列的后面添加一列
+alter table stu_info add phone varchar(11) after gender;
+
+添加列默认在最后面添加
+alter table stu_info add modify_time datetime;
+自动在最后面添加修改时间这一列
+
+10.修改某一列
+修改范围：
+alter table 表名 modidy 列名 新的范围;
+alter table stu_info modify name varchar(200);
+修改列名：
+alter table stu_info change 旧列名 新的列名 类型及范围;
+alter table stu_info change gender sex varchar(2);
+
+11.删除某一列
+alter table 表名 drop 列名;
+
+12.查看表中所有数据
+select * from 表名;
+
+13.插入数据
+插入数据时，数字直接写
+字符需要用单引号引起来
+
+局部插入：
+没有插入的字段默认为null 空
+insert into 表名(字段名1,字段名2,...) values(对应字段的值);
+insert into stu_info(id,name,age,sex) values(1,'Hywel',8,'M');
+
+全局插入：
+值插入的时候必须每个字段都需要插入值
+insert into 表名 values(值);
+
+insert into stu_info values(
+1,'Hywel',8,'M','17680159695','changsha',
+(select current_timestamp()),
+(select current_timestamp())
+);
+
+insert into stu_info values(
+2,'Jack',18,'M','17680159600','USA',
+(select current_timestamp()),
+(select current_timestamp())
+);
+
+
+获取系统时间
+select current_timestamp();
+
+
+14.清空表
+delete from 表名;
+delete from stu_info;
+
+
+
+15.数据库文件备份

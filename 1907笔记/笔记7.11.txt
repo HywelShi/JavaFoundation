@@ -95,6 +95,9 @@ System.out.println(str);
 在不知道加密解密规则的情况下
 无法破解
 
+
+作业：
+
 TCP通信开发步骤：
 1.创建客户端服务端类Client  Server
 2.建立Socket通道 配置ip地址和端口号
