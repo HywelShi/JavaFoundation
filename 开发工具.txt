@@ -10,3 +10,19 @@ HBuilder
 了解更多
 选择windows版本 14M
 下载 解压找到里面的HBuiler.exe启动即可
+
+
+
+mysql数据库安装：
+下载安装包
+百度搜索 网易镜像库
+http://mirrors.163.com/mysql/Downloads/MySQL-5.4/
+下载mysql-5.5.43-winx64.msi
+按照安装文档安装即可（忽略版本）
+文档目录下有Windows环境下对mysql-5.5.28版本的安装图解.docx
+
+
+
+
+
+
