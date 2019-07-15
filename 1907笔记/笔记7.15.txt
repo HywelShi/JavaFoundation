@@ -1,0 +1,180 @@
+数据库知识：
+
+
+存储数据的仓库
+
+增删改查
+
+
+数据库数据的增删改查为主
+
+数据库里面数据是以表的形式存储
+
+primary key auto_increment
+表示主键自增 从0开始
+
+1.创建表
+create table emp(
+id int primary key auto_increment,
+name varchar(200),
+age int(3),
+salary double(8,2),
+address varchar(200),
+create_time datetime,
+modify_time datetime
+);
+2.往表里面插入数据
+
+自动获取系统时间
+select current_timestamp();
+
+insert into emp
+(name,age,salary,address,create_time,modify_time)
+values(
+'smith',21,2563.56,'USA',
+(select current_timestamp),
+(select current_timestamp)
+);
+
+
+insert into emp
+(name,age,salary,address,create_time,modify_time)
+values
+
+('jack',25,8888.88,'usa',(select current_timestamp),(select current_timestamp)),
+
+('tome',22,6666.66,'beijing',(select current_timestamp),(select current_timestamp)),
+
+('rose',21,3333.33,'kunming',(select current_timestamp),(select current_timestamp)),
+
+('james',30,889999.99,'use',(select current_timestamp),(select current_timestamp)),
+
+('white',17,4444.44,'changsha',
+(select current_timestamp),
+(select current_timestamp)
+);
+
+
+
+insert into 表名(列名...) values(),(),();
+
+3.删除数据
+
+全部删除：
+第一种：
+delete from 表名; 清空表
+先清空再插入数据，id不会从0开始
+自增内容不会被重置
+第二种：
+truncate table 表名;
+原理：
+是现将表删除然后重新创建一张表
+
+部分删除：需要在后面添加where条件
+
+
+4.更新数据
+
+update 表名 set 某一列=值; 一列的数据都会改变
+搭配where条件使用
+
+update emp set salary=100000,age =33 
+where name='james';
+
+更改并记录更改时间
+例如：更改white的年龄为20
+update emp set age = 20,
+modify_time=(select current_timestamp) where name='white';
+
+练习：记录更改时间
+1.更改年龄在25岁以上的工资为50000
+update emp set salary=50000 where age>25;
+
+2.更改所有美国的地址为大写
+update emp set address='USA' where address='usa';
+
+
+
+where条件：
+= < > <= >= != <> or and....
+
+*******重点*******
+利用where中的模糊查询来查询数据
+like 
+select * from emp where name like 'j%';
+
+例如：
+'a%'		表示以a开头
+'%a'		表示以a结尾
+'%a%'		表示包含a
+
+_下划线表示占位符
+
+'_a'		表示两位并且以a为结尾
+'a_'		表示两位并且以a为开头
+'_a_'		表示三位中间一位为a
+
+
+数据库默认情况下是对数据没有大小写区分
+想要区分大小写，可以在where的后面添加一个binary
+
+
+
+5.数据查询
+单表查询
+数据库函数
+avg() 求平均值
+max() 求最大值
+min() 求最小值
+sum() 求和
+count() 计数 
+一般用来查询某些条件下有多少条数据
+查看某一张表中有多少条数据
+select count(*) from 表名;
+
+
+
+1.求emp表中所有的员工的平均年龄
+select avg(age) from emp;
+
+2.查询emp中超过平均工资的人员信息
+select * from emp where salary > 
+(select avg(salary) from emp);
+
+3.查询emp中超过平均年龄 并且工资大于5000的人员信息
+select * from emp where age>
+(select avg(age) from emp)
+and salary>5000;
+
+4.查询emp当中大于平均年龄 
+并且工资低于平均工资的人员数量
+select count(*) from emp
+where age >(select avg(age) from emp)
+and
+salary <(select avg(salary) from emp);
+
+
+
+6.利用java来操纵数据库
+
+1.加载驱动  需要下载mysql链接的驱动包
+去阿里云的maven镜像仓库下载
+https://maven.aliyun.com/
+
+
+
+2.设置url地址 需要设置用户名和密码
+3.获取链接
+
+
+4.编写sql语句
+5.利用相关工具执行sql
+6.处理结果
+
+
+
+
+
+
+
+
