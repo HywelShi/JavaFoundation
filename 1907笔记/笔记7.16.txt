@@ -1,0 +1,46 @@
+将代码复制 JDBC_Test04
+用户输入工资
+查询超过此工资的员工信息
+
+难度：查询超过此工资所有员工年龄最大的
+
+查询年龄低于24岁的员工中工资最高的人员信息
+select * from emp where salary=
+(select max(salary) from 
+(select * from emp where age<24) e);
+
+
+
+利用JDBC进行插入数据操作
+
+往测试表中插入100条数据
+test
+
+id	int(4)
+name	varhcar(100)
+age	int(3)
+salary	double(8,2)
+address varchar(200)	
+
+create table test(
+id int primary key auto_increment,
+name varchar(100),
+age int(3),
+salary double(8,2),
+addess varchar(200)
+);
+
+1.完成emp表插入数据
+要求数据手动输入
+输入exit退出 
+2.完成emp表根据姓名
+更改工资
+要求：可参考
+不准copy
+
+
+
+
+
+
+
