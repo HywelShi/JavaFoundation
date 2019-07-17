@@ -1,0 +1,81 @@
+配置tomcat
+1、下载tomcat 去官网下载
+2、解压到某一个盘下
+3、eclipse中配置启动环境
+window-Perference-Server-
+Runtime Environments-
+Add-选择Tomcat 7.0
+Edit-配置地址
+
+4、创建服务
+window-show view-Servers
+点击蓝色链接
+创建服务之后
+双击进入配置界面
+将Server Locations改为第二个
+Ctrl+S保存即可
+
+5、启动
+点击绿色按钮
+控制台提示
+Server startup in xxxms
+
+在浏览器地址栏输入
+http://localhost:8080
+回车即可
+测试tomcat是否正常启动
+http://10.88.32.21:8080
+
+6.创建web项目
+
+7.在webContent下新建一个html文件
+文件中添加账号与密码
+
+8.将网页部署到服务器上 检查是否能够正常访问
+右键server 选择Add and Remove
+选中项目 点击Add finnish 
+启动服务器
+输入网址
+http://localhost:8080/RegisterTest/register.html
+
+访问格式：
+http://服务器ip地址:端口号/项目名/网页名称.html
+
+
+
+
+项目步骤：
+1、新建一个web项目
+RegisterTest02
+2、生成web.xml
+3、添加Tomcat运行环境
+4、window-show view-Servers
+点击蓝色链接
+创建服务之后
+双击进入配置界面
+将Server Locations改为第二个
+Ctrl+S保存即可
+5、在WebContent下创建register.html
+将form表单的action携程register.do
+6、在JavaResource中src下
+创建RegisterSevlet 包名命名为servlet
+8、继承extends HttpServlet
+9、编写service方法 传入请求和响应
+10.获取表单中的用户名和密码
+11.判断 并利用PrintWriter将结果输出到页面上
+12.编写中间配置文件web.xml
+<servlet>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<servlet-class>servlet.RegisterServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>RegisterServlet</servlet-name>
+  	<url-pattern>/register.do</url-pattern>
+  </servlet-mapping>
+
+ 13.将项目部署到tomcat上 启动
+ 14.浏览器访问地址
+ http://localhost:8080/RegisterTest02/register.html
+ 即可
+
