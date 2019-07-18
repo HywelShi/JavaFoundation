@@ -1,0 +1,37 @@
+目标：
+完成用户管理系统的注册以及登陆功能
+启动服务器 用户输入注册地址
+完成注册 
+登陆
+登陆成功之后跳转到主页面
+
+
+1.完成注册功能 注册成功之后存入到数据库
+数据库建表
+create table user(
+id int primary key auto_increment,
+username varchar(100),
+password varchar(200),
+create_time datetime,
+modify_time datetime
+);
+2.将注册页面拷贝过来放到项目的webcontend下
+将昨天写的web.xml里面的内容拷贝到今天项目的web.xml中
+
+出现错误的原因：
+tomcat部署项目之后无法正常启动，检查web.xml文件
+里面的参数是否出错
+
+1.404：表示资源找不到，一般都是网页存放的位置不对
+2.405：get/post表单提交数据方式出错，一般情况下检查
+后台service方法是否写错，包含方法名一定要是service
+传入的参数一定要是HttpServletRequest HttpServletResponse
+项目环境搭建缓存出错，需要重构项目
+3.500：一般情况下都是后台代码出错，
+包含获取前台数据出错或者逻辑出错
+
+其中500错误需要对后台代码细查
+
+4.利用tomcat服务器链接数据库 需要
+在tomcat包下lib中添加mysql驱动包
+添加完毕之后 在eclispe中重新配置tomcat
