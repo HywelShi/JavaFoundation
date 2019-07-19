@@ -1,0 +1,22 @@
+实训：
+1.数据库设计
+1.1库名StudentInfoSys
+create database StudentInfoSys;
+1.2
+user表
+create table user(
+id int primary key auto_increment,
+username varchar(100),
+password varchar(200),
+create_time datetime,
+modify_time datetime
+);
+create table student(
+id int primary key auto_increment,
+name varchar(100),
+age int(3),
+address varchar(200),
+create_time datetime,
+modify_time datetime
+);
+
